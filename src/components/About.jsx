@@ -1,6 +1,7 @@
 import "./About.css";
-import aboutimage from '../assets/images/abouteng.jpg'
+
 import MagneticButton from "./MagneticButton";
+import aboutimage from '../assets/images/abouteng.jpg'
 
 import {
     FaLaptopCode,
