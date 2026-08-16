@@ -1,0 +1,152 @@
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 22px 0;
+    transition: .4s;
+}
+
+.navbar.sticky {
+    background: rgba(5, 8, 22, .85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+
+.logo {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.logo span {
+    color: #00e5ff;
+}
+
+/* Menu */
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #d1d5db;
+    font-size: 16px;
+    transition: .3s;
+    position: relative;
+}
+
+.nav-links li a:hover {
+    color: #00e5ff;
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #00e5ff;
+    transition: .3s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Button */
+
+.hire-btn {
+    background: #00e5ff;
+    color: #08111f;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.hire-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 229, 255, .35);
+}
+
+/* Mobile Icon */
+
+.menu-icon {
+    display: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px) {
+
+    .hire-btn {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #08111f;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 0;
+        transform: translateY(-200%);
+        transition: .4s;
+        border-top: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+}

@@ -1,0 +1,36 @@
+.scroll-progress {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    height: 4px;
+
+    background: linear-gradient(90deg,
+            #00e5ff,
+            #7c3aed,
+            #00e5ff);
+
+    background-size: 200% 100%;
+
+    animation: gradientMove 3s linear infinite;
+
+    z-index: 999999;
+
+    box-shadow: 0 0 20px rgba(0, 229, 255, .6);
+
+}
+
+@keyframes gradientMove {
+
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
+
+}

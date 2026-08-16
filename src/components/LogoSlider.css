@@ -1,0 +1,207 @@
+/* ==========================
+   Logo Slider
+========================== */
+
+.logo-slider-section {
+
+    padding: 90px 0;
+
+    overflow: hidden;
+
+    background: #050816;
+
+}
+
+.logo-title {
+
+    text-align: center;
+
+    color: #00e5ff;
+
+    letter-spacing: 6px;
+
+    font-size: 14px;
+
+    margin-bottom: 45px;
+
+}
+
+/* Slider */
+
+.logo-slider {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    position: relative;
+
+}
+
+/* Fade Effect */
+
+.logo-slider::before,
+
+.logo-slider::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    width: 120px;
+
+    height: 100%;
+
+    z-index: 5;
+
+}
+
+.logo-slider::before {
+
+    left: 0;
+
+    background: linear-gradient(to right, #050816, transparent);
+
+}
+
+.logo-slider::after {
+
+    right: 0;
+
+    background: linear-gradient(to left, #050816, transparent);
+
+}
+
+.logo-track {
+
+    display: flex;
+
+    width: max-content;
+
+    animation: scroll 22s linear infinite;
+
+}
+
+.logo-slider:hover .logo-track {
+
+    animation-play-state: paused;
+
+}
+
+.logo-card {
+
+    width: 180px;
+
+    height: 95px;
+
+    margin: 0 18px;
+
+    background: #0f172a;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: .35s;
+
+}
+
+.logo-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #00e5ff;
+
+    box-shadow: 0 15px 40px rgba(0, 229, 255, .20);
+
+}
+
+.logo-card img {
+
+    width: 70px;
+
+    object-fit: contain;
+
+    transition: .3s;
+
+}
+
+.logo-card:hover img {
+
+    transform: scale(1.1);
+
+}
+
+/* Animation */
+
+@keyframes scroll {
+
+    from {
+
+        transform: translateX(0);
+
+    }
+
+    to {
+
+        transform: translateX(-50%);
+
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+    .logo-card {
+
+        width: 140px;
+
+        height: 80px;
+
+    }
+
+    .logo-card img {
+
+        width: 55px;
+
+    }
+
+    .logo-title {
+
+        font-size: 12px;
+
+        letter-spacing: 4px;
+
+    }
+
+}
+
+@media(max-width:480px) {
+
+    .logo-card {
+
+        width: 120px;
+
+        height: 70px;
+
+        margin: 0 12px;
+
+    }
+
+    .logo-card img {
+
+        width: 45px;
+
+    }
+
+}

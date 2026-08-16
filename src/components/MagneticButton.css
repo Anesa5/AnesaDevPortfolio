@@ -1,0 +1,20 @@
+.magnetic-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 16px 34px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+    cursor: pointer;
+}
